@@ -1,0 +1,46 @@
+
+@import '../globals.scss';
+
+
+
+.auth {
+  background-color: $mainColor;
+  width: 100%;
+  max-width: 600px;
+  margin: 4rem auto;
+  border-radius: .25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    color: $greenColor;
+  }
+}
+
+.auth-form {
+  width: 100%;
+  padding: 1rem;
+
+  .campo {
+    background-color: unset;
+  }
+
+  label {
+    color: $whileColor;
+  }
+}
+
+.auth-form .btn-submit {
+  width: 100%;
+  margin-top: 1rem;
+  display: block;
+  background-color: $greenColor;
+  color: $whileColor;
+  padding: .8rem 1rem;
+  border: none;
+  border-radius: .25rem;
+  font-size: 1rem;
+}

@@ -1,0 +1,125 @@
+
+@import '../globals.scss';
+
+
+.pedidos {
+
+  h2 {
+    color: $greenColor;
+    margin: 2rem 0;
+  }
+
+}
+
+
+.pedido-flex {
+  margin-bottom: 1rem;
+  background-color: #f3f3f3;
+  border-bottom-left-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.pedido-head {
+  background-color: $mainColor;
+  color: $whileColor;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  padding: .5rem;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name span {
+  font-size: 1rem;
+}
+
+.pedido-head button {
+  background-color: $dangerColor;
+  color: $whileColor;
+  font-size: 1rem;
+  padding: .4rem .8rem;
+  text-align: center;
+  border: none;
+  border-radius: .25rem;
+}
+
+
+.pedido-card {
+  padding: 0 1rem;
+
+  h3 {
+    color: $greenColor;
+    font-size: 1.4rem;
+  }
+
+}
+
+
+.pedido-item {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.pedido-item:last-of-type {
+  border-bottom: none;
+}
+
+.cantidad {
+  position: relative;
+}
+
+.cantidad::after {
+  content: '';
+  position: absolute;
+  border-top: 2px solid $greenColor;
+  height: 1em;
+  top: 2em;
+  left: 0em;
+  margin-top: -.2em;
+  width: 100%;
+}
+
+.pedido-item::after{
+  content: '';
+  position: absolute;
+  border-color: $greenColor;
+  border-style: solid;
+  border-width: 0 0.3em 0.25em 0;
+  height: 1em;
+  top: -1.8em;
+  left: 12.5em;
+  margin-top: -1em;
+  transform: rotate(45deg);
+  width: 0.5em;
+}
+
+
+.pedido-item:last-child::after {
+    display: none;
+}
+
+
+.total-pedido {
+  padding: 0 1rem;
+}
+
+
+.campo {
+    position: relative;
+    background-color: red;
+}
+
+.icon-search {
+    position: absolute;
+    top: 3.1rem;
+    right: 0;
+    width: 45px;
+    height: 42px;
+    border-radius: .3rem;
+    cursor: pointer;
+}

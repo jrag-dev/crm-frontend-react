@@ -1,0 +1,21 @@
+@import '../globals.scss';
+@import '../mixins';
+
+
+.profile-page {
+  width: 100%;
+  max-width: 500px;
+  margin: 5rem auto;
+
+  h1 {
+    color: $greenColor;
+  }
+
+  .btn-volver {
+    background-color: $mainColor;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    color: $whileColor;
+    text-decoration: none;
+  }
+}

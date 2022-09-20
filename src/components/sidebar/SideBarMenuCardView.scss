@@ -1,0 +1,48 @@
+
+@import '../../scss/globals.scss';
+
+
+.SideBarMenuCardView {
+  text-align: center;
+  color: $whileColor;
+
+  .profile {
+    max-width: 130px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: .5rem;
+  }
+
+  .profileInfo {
+    overflow: hidden;
+    height: 130px;
+    @include transition(height);
+
+    &.collapsed {
+      opacity: 0;
+      height: 50px;
+    }
+
+    .name {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: 1rem;
+    }
+
+    .url {
+      margin-top: .7rem;
+
+      a {
+        color: $greenColor;
+        text-decoration: none;
+
+        &:hover {
+          color: $greenColorSoft;
+        }
+      }
+    }
+  }
+}

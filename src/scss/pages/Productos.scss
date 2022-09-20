@@ -1,0 +1,181 @@
+@import '../globals.scss';
+@import '../mixins';
+
+
+.productos {
+  width: 100%;
+
+  img {
+    max-width: 100%;
+  }
+
+
+  .productos-header {
+    width: 100%;
+    margin: 2rem auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include desktop() {
+      padding: 1rem;
+      color: $greenColor;
+    }
+
+    h2 {
+      padding: 1rem;
+
+      @include desktop() {
+        padding: 0;
+        color: $greenColor;
+      }
+    }
+
+    .btn-nuevo {
+      padding: .4rem 1rem;
+      width: 6rem;
+      text-align: center;
+      background-color: $greenColor;
+      border-radius: .25rem;
+      color: $whileColor;
+      text-decoration: none;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include desktop() {
+        padding: .6rem 1rem;
+        background-color: $greenColor;
+      }
+    }
+
+  }
+
+  .producto-contenedor {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+    @include telefono() {
+      flex-direction: unset;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include tablet() {
+      flex-direction: unset;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+
+    .card {
+      width: 18rem;
+      height: 450px;
+      background-color: #FFFFFF;
+      border-radius: .5rem;
+      position: relative;
+      box-shadow: 0px 2px 8px 0px rgba(0,0,0,.6);
+    }
+    
+    .card__picture {
+      height: 12rem;
+      overflow: hidden;
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+      object-fit: cover;
+    }
+    .card__img {
+      width: 100%;
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+    }
+    .card__texts {
+      padding: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .card__precio {
+      font-weight: 400;
+    }
+    
+    .card__envio.free {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .card__envio.free {
+      color: #0ead69;
+      font-weight: 600;
+    }
+    
+    .card__paragraph {
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    
+    
+    .card__cta {
+      background-color: #212121;
+      text-decoration: none;
+      display: block;
+      width: 80%;
+      padding: .6rem 1rem;
+      border-radius: .3rem;
+      color: #FFF;
+      text-align: center;
+      margin: 0 auto;
+      position: absolute;
+      bottom: 1.5rem;
+      right: 50%;
+      transform: translateX(50%)
+    }
+    
+    .card__footer {
+      width: 70%;
+      margin: 0 auto;
+    
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    
+    }
+    
+    .card__footer a {
+      text-decoration: none;
+      background-color: $yellowColor;
+      color: $whileColor;
+      font-size: 1rem;
+      padding: .3rem 1rem;
+      border-radius: .3rem;
+      height: 28px;
+    }
+    
+    .card__footer button {
+      background-color: $dangerColor;
+      border: none;
+      color: $whileColor;
+      font-size: 1rem;
+      padding: .3rem 1rem;
+      border-radius: .3rem;
+      height: 28px;
+    }
+
+  }
+}
+
+
+.nuevo-producto {
+  width: 100%;
+  margin: 0 auto;
+
+}
+

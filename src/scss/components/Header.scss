@@ -1,0 +1,97 @@
+@import '../globals.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Staatliches&display=swap');
+
+
+.header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #181818;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.collapsed {
+    width: calc(100%);
+  }
+
+  &.expanded {
+    width: calc(100%);
+  }
+
+  .logo {
+    color: #222;
+    font-family: 'Staatliches', cursive;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid $greenColor;
+    border-radius: 20rem;
+    padding: .4rem 1rem;
+  }
+
+  .header > * {
+    padding: 0rem 1rem;
+  }
+
+  .navbar.login {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-auth {
+    width: 100%;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-auth li {
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .menu-auth a {
+    text-decoration: none;
+    color: #212121;
+  }
+  
+  .active {
+    border-bottom: 2px solid #DE143D;
+    color: #DE143D;
+  }
+  
+  /* 
+  .logout {
+    width: 5rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: .5rem .7rem;
+    border: none;
+    border-radius: .25rem;
+    background-color: #222222;
+  }
+
+  */
+  
+  .logout {
+    background-color: $greenColor;
+    font-size: 1rem;
+    padding: .5rem .7rem;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+  }
+
+}
+
+

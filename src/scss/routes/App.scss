@@ -1,0 +1,133 @@
+@import '../globals.scss';
+@import '../mixins';
+
+
+
+.App {
+  background-color: $whileColor;
+  font-family: Arial;
+  min-height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 70px repeat(3 ,1fr);
+  grid-template-rows: 82px auto auto auto;
+  grid-template-areas: 
+  "header header header header"
+  "main main main main"
+  "main main main main"
+  "main main main main"
+  ;
+
+  @include telefono {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header {
+    grid-area: header;
+  }
+
+  .contenido {
+    width: 100%;
+    grid-area: main;
+    background-color: $whileColor;
+    padding: 1rem;
+  }
+}
+
+
+
+
+.App.inicio {
+  background-color: $whileColor;
+  min-height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 70px repeat(3 ,1fr);
+  grid-template-rows: 82px auto auto auto;
+  grid-template-areas: 
+  "sidebar header header header"
+  "sidebar main main main"
+  "sidebar main main main"
+  "sidebar main main main"
+  ;
+
+  @include telefono {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &.expanded {
+    width: 100%;
+  }
+  
+  .header {
+    grid-area: header;
+    
+    &.collapsed {
+      width: calc(100% - 200px);
+      margin: 0 auto;
+      margin-left: 210px;
+      height: 80px;
+    }
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    position: fixed;
+  }
+
+  .contenido {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    grid-area: main;
+    background-color: $whileColor;
+    padding: 1rem;
+
+    @include telefono {
+      width: 90%;
+    }
+
+    @include tablet() {
+      width: 90%;
+    }
+
+    @include desktop() {
+      width: 90%;
+    }
+
+    &.collapsed {
+      width: calc(100% - 300px);
+      margin: 0 15rem;
+      width: calc(100% - 100px);
+      margin: 0 auto;
+      margin-left: 220px;
+    }
+  }
+}
+
+
+
+// estilos para las alertas de formularios de clientes
+
+.alerta-error {
+  background-color: #f64f56;
+  padding: .7rem 1rem;
+  text-align: center;
+  border-radius: .25rem;
+  color: $whileColor;
+  font-size: 1rem;
+}
+
+
+.input-error {
+  border: 3px solid #f64f56;
+  color: red;
+  height: 4rem;
+}
+
+
+

@@ -1,0 +1,52 @@
+@import '../globals.scss';
+
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+
+
+  legend {
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $whileColor;
+      
+    label {
+      margin: 1rem 0;
+    }
+
+    input {
+      padding: .7rem 1rem;
+      border-radius: .25rem;
+      border: none;
+      border: 1px solid #dedede;
+      outline: none;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    img {
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  button {
+    width: 12rem;
+    padding: .7rem 1rem;
+    background-color: $greenColor;
+    border: none;
+    border-radius: .25rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: $whileColor;
+    font-size: 1rem;
+  }
+}

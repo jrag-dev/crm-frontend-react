@@ -1,0 +1,43 @@
+
+@import '../../scss/globals.scss';
+
+
+.SideBarMenuNone {
+  display: none;
+}
+
+
+.SideBarMenu {
+  background-color: $mainColor;
+  color: $whileColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @include transition(width);
+
+  &.expanded {
+    width: 300px;
+  }
+
+  &.collapsed {
+    width: 70px;
+  }
+
+  .menuButton {
+    display: flex;
+    justify-content: right;
+
+    .hamburgerIcon {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      color: $whileColor;
+      padding: 1rem;
+      width: 5rem;
+    }
+  }
+}

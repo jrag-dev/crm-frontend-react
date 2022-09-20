@@ -1,0 +1,183 @@
+@import '../globals.scss';
+@import '../mixins';
+
+
+.clientes {
+  width: 100%;
+
+  h2 {
+    color: $greenColor;
+  }
+}
+
+.clientes-header {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop() {
+    width: 100%;
+  }
+
+  .btn-nuevo {
+    padding: .4rem 1rem;
+    background-color: $greenColor;
+    border-radius: .25rem;
+    color: $whileColor;
+    text-decoration: none;
+
+    @include desktop() {
+      padding: .6rem 1rem;
+    }
+  }
+}
+
+
+.cliente {
+  width: 100%;
+  margin: 0 auto;
+
+  .cliente-card {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: .25rem;
+    -webkit-box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.26);
+    -moz-box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.26);
+    box-shadow: 1px 3px 7px 0px rgba(0,0,0,0.26);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    @include tablet() {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @include desktop() {
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+      .cliente-body {
+        text-align: center;
+
+        @include tablet() {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+    .cliente-acciones {
+      width: 100%;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include tablet() {
+        width: 30%;
+      }
+
+
+
+      .btn-delete {
+        padding: .5rem 1rem;
+        border: none;
+        border-radius: .25rem;
+        background-color: $dangerColor;
+        color: $whileColor;
+        font-size: .9rem;
+      }
+
+      .btn-editar {
+        background-color: $yellowColor;
+        text-decoration: none;
+        padding: .4rem 1rem;
+        border-radius: .25rem;
+        color: $whileColor;
+      }
+
+      .btn--nuevo {
+        background-color: $greenColor;
+      }
+    }
+  }
+}
+
+
+// Agregando estilos para la sección de nuevos clientes
+
+.nuevo-cliente {
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+
+
+.btn-submit{
+  width: 12rem;
+  padding: .7rem 1rem;
+  background-color: $greenColor;
+  border: none;
+  border-radius: .25rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: $whileColor;
+  font-size: 1rem;
+}
+
+.search {
+  background-color: $yellowColor;
+}
+
+.minus {
+  background-color: #f64f56;
+  width: 4rem;
+}
+
+.btn-delete {
+  background-color: #f64f56;
+}
+
+.plus {
+  width: 4rem;
+  margin-left: 1rem;
+}
+
+
+
+// estilos para las alertas de formularios de clientes
+
+.alerta-error {
+  background-color: #f64f56;
+  padding: .7rem 1rem;
+  text-align: center;
+  border-radius: .25rem;
+  color: $whileColor;
+  font-size: 1rem;
+}
+
+
+.input-error {
+  border: 3px solid #f64f56;
+  color: red;
+  height: 4rem;
+}

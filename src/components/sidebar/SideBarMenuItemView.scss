@@ -1,0 +1,77 @@
+
+@import '../../scss/mixins';
+
+
+.SideBarMenuItemView {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 .3rem;
+
+  a {
+    color: $whileColor;
+    text-decoration: none;
+    display: block;
+    padding: .8rem;
+    width: 100%;
+    border-radius: .25rem;
+
+    .ItemContent {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      @include transition(width);
+
+      &.collapsed {
+        width: 35px;
+      }
+
+      .icon {
+        width: 35px;
+        height: 35px;
+      }
+
+      .label {
+        font-weight: 500;
+        margin-left: 1rem;
+        overflow: hidden;
+      }
+    }
+
+    &:hover {
+      background-color: $greenColor;
+    }
+
+    &:hover {
+      & + .tooltip {
+        display: inline-block;
+        animation-duration: .4s;
+        animation-name: tooltip;
+        color: $whileColor;
+      }
+    }
+  }
+
+  .tooltip {
+    width: 6.5rem;
+    position: absolute;
+    background-color: #000;
+    left: 72px;
+    border-radius: .25rem;
+    text-transform: capitalize;
+    padding: .5rem 1rem;
+    display: none;
+  }
+}
+
+@keyframes tooltip {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .8;
+  }
+}
